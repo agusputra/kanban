@@ -23,7 +23,9 @@ class KanbanLists extends React.Component {
       return
     }
 
-    this.props.moveTask(source.droppableId, destination.droppableId, draggableId)
+    if (source.droppableId !== destination.droppableId) {
+      this.props.moveTask(source.droppableId, destination.droppableId, draggableId)
+    }
   }
 
   render() {
