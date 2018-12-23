@@ -1,12 +1,12 @@
 import React from 'react'
 import { Draggable } from 'react-beautiful-dnd'
 import AddTask from '../containers/AddTask'
-import Task from '../components/Task'
+import Task from '../containers/Task'
 
 export default class List extends React.Component {
   render() {
     return (
-      <div className="col-3" ref={this.props.innerRef}>
+      <div className="col-3 mb-5" ref={this.props.innerRef}>
         <div className="card">
           <div className="card-header">
             {this.props.list.title}

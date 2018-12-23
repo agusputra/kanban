@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import { combineReducers } from 'redux'
-import { ADD_TASK, MOVE_TASK } from './actions'
+import { ADD_TASK, MOVE_TASK, EDIT_TASK } from './actions'
 
 function lists(state, action) {
   if (state === undefined) {
@@ -43,12 +43,20 @@ function tasks(state, action) {
     }
   }
 
+  let task
+
   switch (action.type) {
     case (ADD_TASK):
-      const task = { id: action.id, title: 'New TASK' }
+      task = { id: action.id, title: 'New Task' }
       return {
         ...state,
         [action.id]: task
+      }
+    case (EDIT_TASK):
+      task = state[action.id]
+      return {
+        ...state,
+        [action.id]: { ...task, title: action.value }
       }
     default:
       return state
