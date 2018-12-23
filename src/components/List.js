@@ -17,7 +17,7 @@ export default class List extends React.Component {
                 <Draggable key={task.id} draggableId={task.id} index={index}>
                   {
                     (provided, snapshot) => (
-                      <Task task={task} innerRef={provided.innerRef} provided={provided} />
+                      <Task list={this.props.list} task={task} innerRef={provided.innerRef} provided={provided} />
                     )
                   }
                 </Draggable>

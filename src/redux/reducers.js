@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import { combineReducers } from 'redux'
-import { ADD_TASK, MOVE_TASK, EDIT_TASK } from './actions'
+import { ADD_TASK, MOVE_TASK, EDIT_TASK, DELETE_TASK } from './actions'
 
 function lists(state, action) {
   if (state === undefined) {
@@ -26,6 +26,13 @@ function lists(state, action) {
         ...state,
         [from.id]: { ...from, tasks: _.without(from.tasks, action.id) },
         [to.id]: { ...to, tasks: to.tasks.concat(action.id) }
+      }
+    }
+    case (DELETE_TASK): {
+      const list = state[action.listId]
+      return {
+        ...state,
+        [list.id]: { ...list, tasks: _.without(list.tasks, action.id) }
       }
     }
     default:
@@ -58,6 +65,8 @@ function tasks(state, action) {
         ...state,
         [action.id]: { ...task, title: action.value }
       }
+    case (DELETE_TASK):
+      return _.omit(state, action.id)
     default:
       return state
   }
