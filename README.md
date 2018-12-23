@@ -8,3 +8,6 @@
 - To Edit Task: Click on Task body. And just click another area to automatically save.
 - To Move Task: Drag and drop Task to another List (Backlog, Todo, In Progress and Done).
 - To Delete Task: Click on `Delete` button on each Task header.
+
+# Screenshot
+![kanban](kanban.png)
