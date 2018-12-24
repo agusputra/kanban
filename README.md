@@ -9,5 +9,8 @@
 - To Move Task: Drag and drop Task to another List (Backlog, Todo, In Progress and Done).
 - To Delete Task: Click on `Delete` button on each Task header.
 
+# Demo
+https://codesandbox.io/s/github/agusputra/kanban
+
 # Screenshot
 ![kanban](kanban.png)
