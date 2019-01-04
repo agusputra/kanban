@@ -10,7 +10,7 @@
 - To Delete Task: Click on `Delete` button on each Task header.
 
 # Demo
-https://codesandbox.io/s/github/agusputra/kanban
+https://kkpnnkkzov.codesandbox.io
 
 # Screenshot
 ![kanban](kanban.png)
