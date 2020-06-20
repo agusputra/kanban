@@ -1,3 +1,6 @@
+# Demo
+https://kkpnnkkzov.codesandbox.io
+
 # How to run the app
 1. run `yarn install`
 2. run `yarn start`
@@ -8,9 +11,6 @@
 - To Edit Task: Click on Task body. And just click another area to automatically save.
 - To Move Task: Drag and drop Task to another List (Backlog, Todo, In Progress and Done).
 - To Delete Task: Click on `Delete` button on each Task header.
-
-# Demo
-https://kkpnnkkzov.codesandbox.io
 
 # Screenshot
 ![kanban](kanban.png)
